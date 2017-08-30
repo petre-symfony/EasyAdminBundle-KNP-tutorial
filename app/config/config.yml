@@ -85,7 +85,7 @@ easy_admin:
     assets:
       css: ['css/custom_backend.css']
   list:
-    title: "List"
+    title: "List of %%entity_label%%"
   entities:
     - AppBundle\Entity\Genus
     - AppBundle\Entity\GenusNote
