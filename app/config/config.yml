@@ -108,6 +108,9 @@ easy_admin:
       search:
         help: null
         fields: ['id', 'name']
+    GenusHorde:
+      class:  AppBundle\Entity\Genus  
+      label: HORDE of Genuses 😱 !!!   
     GenusNote:  
       class:  AppBundle\Entity\GenusNote
       label: 'Genus Notes'
