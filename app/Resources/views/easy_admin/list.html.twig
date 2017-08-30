@@ -37,6 +37,7 @@
 {% block page_title %}{{ _content_title|striptags|raw }}{% endblock %}
 
 {% block content_header %}
+  {{ dump() }}
   <div class="row">
     <div class="col-sm-5">
       {% block content_title_wrapper %}
