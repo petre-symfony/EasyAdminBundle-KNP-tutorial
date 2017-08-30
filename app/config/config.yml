@@ -84,6 +84,8 @@ easy_admin:
     brand_color: '#81b9ba'
     assets:
       css: ['css/custom_backend.css']
+  list:
+    title: "List"
   entities:
     - AppBundle\Entity\Genus
     - AppBundle\Entity\GenusNote
