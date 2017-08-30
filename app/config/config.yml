@@ -118,4 +118,12 @@ easy_admin:
         actions: ['-show']
       disabled_actions: ['show']  
     User:  
-      class: AppBundle\Entity\User     
+      class: AppBundle\Entity\User 
+      list:
+        fields:
+          - id
+          - email
+          - { property: isScientist, label: 'Is Scientist?', type: boolean }
+          - firstName
+          - lastName
+          - avatarUri
