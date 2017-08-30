@@ -115,6 +115,8 @@ easy_admin:
         dql_filter: 'entity.speciesCount >= 50000 AND entity.isPublished = true'
         sort: 'speciesCount'
         help: Run for your life!! 😱😱😱
+      search:
+        dql_filter: 'entity.speciesCount >= 50000'  
     GenusNote:  
       class:  AppBundle\Entity\GenusNote
       label: 'Genus Notes'
