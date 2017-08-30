@@ -113,6 +113,8 @@ easy_admin:
       label: HORDE of Genuses 😱 !!! 
       list:
         dql_filter: 'entity.speciesCount >= 50000 AND entity.isPublished = true'
+        sort: 'speciesCount'
+        help: Run for your life!! 😱😱😱
     GenusNote:  
       class:  AppBundle\Entity\GenusNote
       label: 'Genus Notes'
