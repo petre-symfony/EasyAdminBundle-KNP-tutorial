@@ -110,7 +110,9 @@ easy_admin:
         fields: ['id', 'name']
     GenusHorde:
       class:  AppBundle\Entity\Genus  
-      label: HORDE of Genuses 😱 !!!   
+      label: HORDE of Genuses 😱 !!! 
+      list:
+        dql_filter: 'entity.speciesCount >= 50000'
     GenusNote:  
       class:  AppBundle\Entity\GenusNote
       label: 'Genus Notes'
