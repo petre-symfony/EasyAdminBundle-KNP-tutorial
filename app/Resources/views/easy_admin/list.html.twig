@@ -37,7 +37,6 @@
 {% block page_title %}{{ _content_title|striptags|raw }}{% endblock %}
 
 {% block content_header %}
-  {{ dump() }}
   <div class="row">
     <div class="col-sm-5">
       {% block content_title_wrapper %}
@@ -147,6 +146,7 @@
               {% set _column_label =  'list.row_actions'|trans(_trans_parameters, 'EasyAdminBundle') %}
               <td data-label="{{ _column_label }}" class="actions">
               {% block item_actions %}
+                {{ dump(_list_item_actions) }}
                 {{ include('@EasyAdmin/default/includes/_actions.html.twig', {
                   actions: _list_item_actions,
                   request_parameters: _request_parameters,
