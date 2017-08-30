@@ -119,6 +119,7 @@ easy_admin:
           - { property: userAvatarFilename, label: 'User avatar', type: image, base_path: '/images/' }
           - createdAt
           - genus
+        sort: ['genus.name', 'ASC']
     SubFamily:  
       class: AppBundle\Entity\SubFamily
       list:
