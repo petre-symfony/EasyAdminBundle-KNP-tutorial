@@ -108,6 +108,8 @@ easy_admin:
       search:
         help: null
         fields: ['id', 'name']
+      templates:
+        field_id: 'admin/fields/_id.html.twig' 
         
     GenusHorde:
       class:  AppBundle\Entity\Genus  
