@@ -21,6 +21,16 @@ class GenusController extends AdminController {
   }
   
   public function exportAction() {
+    $sortDirection = $this->request->query->get('sortDirection');
+    if (empty($sortDirection) || !in_array($sortDirection, ['ASC', 'DESC'])){
+      $sortDirection = 'DESC';
+    }
    
+    $queryBuilder = $this->createListQueryBuilder(
+      $this->entity['class'], 
+      $sortDirection,
+      $this->request->query->get('sortField'),
+      $this->entity['list']['dql_filter']
+    );
   }
 }
