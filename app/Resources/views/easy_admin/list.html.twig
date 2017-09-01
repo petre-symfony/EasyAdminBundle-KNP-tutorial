@@ -5,3 +5,14 @@
   
   {{ parent() }}
 {% endblock %}
+
+{% block global_actions %}
+  {% if easyadmin_action_is_enabled_for_list_view('export', _entity_config.name) %}
+    <div class="button-action">
+      <a href="{{ path('easyadmin', _request_parameters|merge({action: 'export'})) }}" class="btn btn-primary">
+        <i class="fa fa-download"></i>
+        Export
+      </a>
+    </div>  
+  {% endif %}  
+{% endblock %}
