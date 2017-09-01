@@ -128,25 +128,27 @@ easy_admin:
           - { name: changePublishedStatus, css_class: btn }  
       form:
         fields:
-          - 
-            property: id
-            type_options: { disabled: true }
-          - 
-            property: slug
-            help: 'Unique auto-generated value'
-            type_options: { disabled: true }  
+          - { type: group, css_class: 'col-sm-6', label: 'Basic Information'}
           - name
           - speciesCount
-          - { property: funFact, type: textarea, css_class: 'js-markdown-input' }
-          - isPublished
           - { property: firstDiscoveredAt, type_options: { widget: 'single_text' } }
           - { property: 'subFamily', type: 'easyadmin_autocomplete'  }
+          - { type: section, label: Optional }
+          - { property: funFact, type: textarea, css_class: 'js-markdown-input' }
+          - isPublished
           - 
             property: genusScientists
             type: text
             type_options:
               mapped: false
               attr: { class: 'js-scientists-field' }
+          - 
+            property: id
+            type_options: { disabled: true }
+          - 
+            property: slug
+            help: 'Unique auto-generated value'
+            type_options: { disabled: true }    
       new:
         fields:
           - '-id'
