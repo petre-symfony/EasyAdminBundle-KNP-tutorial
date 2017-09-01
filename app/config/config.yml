@@ -112,12 +112,14 @@ easy_admin:
         fields: ['id', 'name']
       form:
         fields:
-          - id
+          - 
+            property: id
+            type_options: { disabled: true }
           - name
           - speciesCount
           - { property: funFact, type: textarea }
           - isPublished
-          - firstDiscoveredAt
+          - { property: firstDiscoveredAt, type_options: { widget: 'single_text' } }
           - subFamily
           - genusScientists
       new:
@@ -125,7 +127,10 @@ easy_admin:
           - '-id'
       edit:
         fields:
-          - slug    
+          - 
+            property: slug
+            help: 'Unique auto-generated value'
+            type_options: { disabled: true }  
         
     GenusHorde:
       class:  AppBundle\Entity\Genus  
