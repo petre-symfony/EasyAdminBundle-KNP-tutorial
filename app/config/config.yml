@@ -136,12 +136,19 @@ easy_admin:
           - { type: section, label: Optional }
           - { property: funFact, type: textarea, css_class: 'js-markdown-input' }
           - isPublished
+          - { type: group, css_class: col-sm-6, label: 'Studied by ...'}
           - 
             property: genusScientists
             type: text
             type_options:
               mapped: false
               attr: { class: 'js-scientists-field' }
+          -
+            type: group
+            css_class: col-sm-6
+            label: Identification
+            icon: id-card-o
+            help: For administrators    
           - 
             property: id
             type_options: { disabled: true }
