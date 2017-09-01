@@ -126,12 +126,10 @@ easy_admin:
           - { property: 'subFamily', type: 'easyadmin_autocomplete'  }
           - 
             property: genusScientists
-            type: 'collection'
+            type: text
             type_options:
-              entry_type: AppBundle\Form\GenusScientistEmbeddedForm
-              allow_delete: true
-              allow_add: true
-              by_reference: false
+              mapped: false
+              attr: { class: 'js-scientists-field' }
       new:
         fields:
           - '-id'
