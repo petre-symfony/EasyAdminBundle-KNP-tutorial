@@ -19,4 +19,8 @@ class GenusController extends AdminController {
       'id' => $id
     ]);
   }
+  
+  public function exportAction() {
+   
+  }
 }
