@@ -79,6 +79,7 @@ stof_doctrine_extensions:
       sluggable: true
       
 easy_admin:
+  site_name: Aqua<i>Note</i>
   entities:
     - AppBundle\Entity\Genus
     - AppBundle\Entity\GenusNote
