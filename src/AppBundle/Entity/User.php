@@ -197,7 +197,16 @@ class User implements UserInterface {
   public function getFullName(){
     return trim($this->getFirstName().' '.$this->getLastName());
   }
-
+  
+  public function setFullName($fullName){
+    $names = explode(' ', $fullName);
+    $firstName = array_shift($names);
+    $lastName = implode(' ', $names);
+    
+    $this->setFirstName($firstName);
+    $this->setLastName($lastName);
+  }
+  
   /**
    * @return ArrayCollection|GenusScientist[]
    */
