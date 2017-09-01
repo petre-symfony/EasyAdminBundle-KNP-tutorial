@@ -1,10 +1,9 @@
 <?php
 namespace AppBundle\Controller\EasyAdmin;
 
-use JavierEguiluz\Bundle\EasyAdminBundle\Controller\AdminController as BaseAdminController;
 use AppBundle\Entity\User;
 
-class UserController extends BaseAdminController {
+class UserController extends AdminController {
   /**
    * 
    * @param User $entity

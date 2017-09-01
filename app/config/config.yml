@@ -98,6 +98,7 @@ easy_admin:
   entities:
     Genus:
       class:  AppBundle\Entity\Genus
+      controller: AppBundle\Controller\EasyAdmin\GenusController
       label: Genuses
       help: 'Genuses are not covered by warranty!'
       list: 
