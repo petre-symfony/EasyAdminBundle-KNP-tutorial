@@ -4,6 +4,7 @@ namespace AppBundle\Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use JavierEguiluz\Bundle\EasyAdminBundle\Event\EasyAdminEvents;
 use Symfony\Component\EventDispatcher\GenericEvent;
+use AppBundle\Entity\User;
 
 class EasyAdminSubscriber implements EventSubscriberInterface {
   public static function getSubscribedEvents() {
@@ -13,6 +14,11 @@ class EasyAdminSubscriber implements EventSubscriberInterface {
   }
   
   public function onPreUpdate(GenericEvent $event){
-    dump($event);die();  
+    $entity = $event->getSubject();  
+    
+    if ($entity instanceof User){
+      
+    }
+ 
   }
 }
