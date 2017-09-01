@@ -120,7 +120,7 @@ easy_admin:
           - { property: funFact, type: textarea }
           - isPublished
           - { property: firstDiscoveredAt, type_options: { widget: 'single_text' } }
-          - subFamily
+          - { property: subFamily, type: 'easyadmin_autocomplete' }
           - genusScientists
       new:
         fields:
@@ -154,7 +154,7 @@ easy_admin:
           - createdAt
           - genus  
         sort: ['genus.name', 'ASC']  
-    Subfamily:  
+    SubFamily:  
       class: AppBundle\Entity\SubFamily
       list:
         actions: ['-show']
@@ -167,5 +167,4 @@ easy_admin:
           - { property: email, type: email }
           - { property: isScientist, label: 'Is Scientist?', type: boolean }
           - { property: 'fullName', template: _field_user_full_name.html.twig }
-          - lastName
           - { property: avatarUri, type: url }
