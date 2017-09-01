@@ -123,7 +123,8 @@ easy_admin:
             type: 'route'
             label: Feed genus
             css_class: 'btn btn-info'
-            icon: cutlery   
+            icon: cutlery 
+          - { name: changePublishedStatus, css_class: btn }  
       form:
         fields:
           - 
