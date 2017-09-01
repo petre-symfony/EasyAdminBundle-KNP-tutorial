@@ -80,6 +80,8 @@ stof_doctrine_extensions:
       
 easy_admin:
   site_name: Aqua<i>Note</i>
+  design:
+    brand_color: '#81b9ba'
   entities:
     - AppBundle\Entity\Genus
     - AppBundle\Entity\GenusNote
