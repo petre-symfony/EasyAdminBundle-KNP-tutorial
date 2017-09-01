@@ -98,6 +98,12 @@ easy_admin:
       - 
         label: 'Genus'
         children:
+          -
+            entity: Genus
+            label: 'Pet genus'
+            params:
+              action: show
+              id: 2
           - Genus
           -
             entity: Genus
