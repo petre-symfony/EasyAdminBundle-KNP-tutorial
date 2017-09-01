@@ -131,6 +131,10 @@ easy_admin:
           - 
             property: id
             type_options: { disabled: true }
+          - 
+            property: slug
+            help: 'Unique auto-generated value'
+            type_options: { disabled: true }  
           - name
           - speciesCount
           - { property: funFact, type: textarea, css_class: 'js-markdown-input' }
@@ -146,12 +150,7 @@ easy_admin:
       new:
         fields:
           - '-id'
-      edit:
-        fields:
-          - 
-            property: slug
-            help: 'Unique auto-generated value'
-            type_options: { disabled: true }
+          - '-slug'
         
     GenusHorde:
       class:  AppBundle\Entity\Genus  
