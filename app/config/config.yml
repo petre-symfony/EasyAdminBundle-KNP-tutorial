@@ -115,7 +115,7 @@ easy_admin:
           - id
           - name
           - speciesCount
-          - funFact
+          - { property: funFact, type: textarea }
           - isPublished
           - firstDiscoveredAt
           - subFamily
