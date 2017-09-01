@@ -29,6 +29,8 @@ class EasyAdminExtension extends \Twig_Extension{
     if ($item instanceof User && !$this->authorizationChecker->isGranted('ROLE_SUPERADMIN')){
       unset($itemActions['edit']);
     }
+    
+    unset($itemActions['export']);
     return $itemActions;
   }
 }
