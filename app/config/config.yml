@@ -181,6 +181,7 @@ easy_admin:
       disabled_actions: ['show']  
     User:  
       class: AppBundle\Entity\User 
+      controller: AppBundle\Controller\EasyAdmin\UserController
       list:
         fields:
           - id
