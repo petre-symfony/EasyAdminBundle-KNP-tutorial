@@ -14,6 +14,13 @@ use Symfony\Component\HttpFoundation\Response;
 
 class GenusController extends Controller {
   /**
+   * @Route("/genus/feed", name="genus_feed")
+   */
+  public function feedAction(){
+    
+  }
+  
+  /**
    * @Route("/genus/new")
    */
   public function newAction() {
