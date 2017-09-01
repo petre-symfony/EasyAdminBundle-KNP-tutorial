@@ -2,8 +2,16 @@
 namespace AppBundle\Controller\EasyAdmin;
 
 use AppBundle\Entity\Genus;
+use AppBundle\Service\CsvExporter;
+
 
 class GenusController extends AdminController {
+  private $csvExporter;
+  
+  public function __construct(CsvExporter $csvExporter) {
+    $this->csvExporter = $csvExporter;
+  }
+  
   public function changePublishedStatusAction(){
     $id = $this->request->query->get('id');
     $entity = $this->em->getRepository(Genus::class)->find($id);
@@ -31,6 +39,12 @@ class GenusController extends AdminController {
       $sortDirection,
       $this->request->query->get('sortField'),
       $this->entity['list']['dql_filter']
+    );
+    
+    return $this->csvExporter->getResponseFromQueryBuilder(
+      $queryBuilder, 
+      Genus::class,
+      'genuses.csv'
     );
   }
 }
