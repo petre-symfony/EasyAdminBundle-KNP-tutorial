@@ -110,7 +110,16 @@ easy_admin:
       search:
         help: null
         fields: ['id', 'name']
-      
+      form:
+        fields:
+          - id
+          - name
+          - speciesCount
+          - funFact
+          - isPublished
+          - firstDiscoveredAt
+          - subFamily
+          - genusScientists
         
     GenusHorde:
       class:  AppBundle\Entity\Genus  
