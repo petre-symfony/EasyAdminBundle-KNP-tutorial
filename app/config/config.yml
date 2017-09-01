@@ -99,6 +99,13 @@ easy_admin:
         label: 'Genus'
         children:
           - Genus
+          -
+            entity: Genus
+            label: 'Genuses {sorted by ID}'
+            params:
+              sortField: id
+              sortDirection: ASC
+              pizza: 'delicious'
           - GenusHorde
           - { label: Related }
           - Genus
